@@ -40,6 +40,7 @@ export default {
   --main-purple: #6246EA;
   --secondary-purple: #B9C0E2;
   --text-purple:#232946; 
+  --main-salmon:#EEBBC2;
 }
 
 .app-container{
