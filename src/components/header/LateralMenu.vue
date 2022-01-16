@@ -67,7 +67,7 @@
               class="main-nav-item"
             >
               <span @click="$emit('close')">
-                Hacerca de... 
+                Acerca de... 
               </span>
               <span 
                 class="underline"
