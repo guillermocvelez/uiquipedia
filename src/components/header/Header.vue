@@ -7,13 +7,17 @@
         <div class="top-navbar">
           <ul class="top-navbar_items">                     
             <li class="top-navbar_item">
-              <p class="top-navbar_item-text">Blog</p>
+              <router-link to="blog" class="top-navbar_item-text">Blog</router-link>
             </li>
             <li class="top-navbar_item">
-              <i class="fab fa-twitter-square fa-2x"></i>
+              <a class="social-link" href="https://twitter.com/guillermo_cv" target="-blank">
+                <i class="fab fa-twitter-square fa-2x"></i>
+              </a> 
             </li>
             <li class="top-navbar_item">
-              <i class="fab fa-youtube fa-2x"></i>
+              <a class="social-link"  href="https://www.youtube.com/channel/UCrBgIeIGzZZp3fEFVtEyqow" target="_blank">
+                <i class="fab fa-youtube fa-2x"></i>
+              </a> 
             </li>
             
           </ul>
@@ -195,6 +199,13 @@ export default {
 }
 .route-active{
   transform: scaleX(1)
+}
+
+.social-link{
+  color: white;
+}
+.social-link:visited{
+  color: white;
 }
 
 @media screen and (max-width: 768px){
