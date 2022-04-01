@@ -1,70 +1,69 @@
 <template>
   <div>
-    <h3 class="section-title">UIquidocs</h3>
 
-    <div class="section-description-container">
-      <p class="section-description" >Los UIquidcos son una colección personal de mi aprendizaje y tips útiles que he aprendido en mi camino de desarrollador Front End. <br> <br> En ningún momento pretende ser una guía definitiva, solo un punto de vista más. Todo lo que encuentres en ésta página lo puedes utilizar de manera libre, no te voy a pedir donaciones ni créditos en tus proyectos. <br> <br> Si encuentras algo útil compártelo, si tienes aportes comentarios o feedback siéntete libre en contactarme.         
-      </p>
-      <div class="card-container">
-        <div class="card">
-          <div class="card-avatar">
-            
+    <router-view></router-view>
+    <div  class="main-container" v-if="$route.path == '/'" >
+      
+      <h3 class="section-title">UIquidocs</h3>
+      <div class="section-description-container">
+        <p class="section-description" >Los UIquidcos son una colección personal de mi aprendizaje y tips útiles que he aprendido en mi camino de desarrollador Front End. <br> <br> En ningún momento pretende ser una guía definitiva, solo un punto de vista más. Todo lo que encuentres en ésta página lo puedes utilizar de manera libre, no te voy a pedir donaciones ni créditos en tus proyectos. <br> <br> Si encuentras algo útil compártelo, si tienes aportes comentarios o feedback siéntete libre en contactarme.
+        </p>
+        <div class="card-container">
+          <div class="card">
+            <div class="card-avatar">
+      
+            </div>
+            <div>
+              <p class="card-text name">Guillermo Castaño Vélez</p>
+              <p class="card-text about-me">Diseñador UI/UX - Desarrollador Front End</p>
+            </div>
+            <div class="personal-web">
+              <a class="web-link" href="https://guillermocv.com/" target="_blank">Web personal</a>
+            </div>
           </div>
-          <div>
-            <p class="card-text name">Guillermo Castaño Vélez</p>
-            <p class="card-text about-me">Diseñador UI/UX - Desarrollador Front End</p>
-          </div>
-
-          <div class="personal-web">
-            <a class="web-link" href="https://guillermocv.com/" target="_blank">Web personal</a>
-          </div>
-
         </div>
       </div>
+      
+      <section class="uiquidocs-container">
+        <router-link :to="{ name: 'diseno' }">
+          <DocSection>
+            <img slot="icon" class="doc-icon" src="@/assets/BasicDesignIcon.svg">
+            <h3 class="doc-title" slot="title">Diseño básico</h3>
+            <p class="doc-text" slot="paragraph">Conceptos básicos de diseño gráfico y diseño de interfaces</p>
+          </DocSection>
+        </router-link>
+        <DocSection>
+          <img slot="icon" class="doc-icon" src="@/assets/UiUxIcon.svg">
+          <h3 class="doc-title" slot="title">UI/UX</h3>
+          <p class="doc-text" slot="paragraph">Metodologías para el diseño de interfaces y el diseño de experiencias</p>
+        </DocSection>
+        <DocSection>
+          <img slot="icon" class="doc-icon" src="@/assets/DesignSystemsIcon.svg">
+          <h3 class="doc-title" slot="title">Sistemas de diseño</h3>
+          <p class="doc-text" slot="paragraph">Colecciones de componentes reutilizables para aplicaciones web profesionales</p>
+        </DocSection>
+      
+        <DocSection>
+          <img slot="icon" class="doc-icon" src="@/assets/HtmlDocIcon.svg">
+          <h3 class="doc-title" slot="title">HTML</h3>
+          <p class="doc-text" slot="paragraph">Guías detalladas sobre el lenguaje de marcado y etiquetado de la Web.</p>
+        </DocSection>
+        <DocSection>
+          <img slot="icon" class="doc-icon" src="@/assets/CssDocIcon.svg">
+          <h3 class="doc-title" slot="title">CSS</h3>
+          <p class="doc-text" slot="paragraph">Tips y trucos de CSS para darle vida a los sitios Web Sistemas de grillas, animaciones</p>
+        </DocSection>
+      
+        <DocSection>
+          <img slot="icon" class="doc-icon" src="../../../assets/JsDocIcon.svg">
+          <h3 class="doc-title" slot="title">JavaScripit</h3>
+          <p class="doc-text" slot="paragraph">Cómo unir todo el conocimiento para hacer aplicaciones y páginas Web con la mejor experiencia de usiario.</p>
+        </DocSection>
+      
+      </section>
     </div>
+
     
-
-    <section class="uiquidocs-container">
-      <DocSection>
-        <img slot="icon" class="doc-icon" src="@/assets/BasicDesignIcon.svg">   
-        <h3 class="doc-title" slot="title">Diseño básico</h3>
-        <p class="doc-text" slot="paragraph">Conceptos básicos de diseño gráfico y diseño de interfaces</p>        
-      </DocSection>
-
-      <DocSection>
-        <img slot="icon" class="doc-icon" src="@/assets/UiUxIcon.svg">   
-        <h3 class="doc-title" slot="title">UI/UX</h3>
-        <p class="doc-text" slot="paragraph">Metodologías para el diseño de interfaces y el diseño de experiencias</p>        
-      </DocSection>
-
-      <DocSection>
-        <img slot="icon" class="doc-icon" src="@/assets/DesignSystemsIcon.svg">   
-        <h3 class="doc-title" slot="title">Sistemas de diseño</h3>
-        <p class="doc-text" slot="paragraph">Colecciones de componentes reutilizables para aplicaciones web profesionales</p>        
-      </DocSection>
-      
-      <DocSection>
-        <img slot="icon" class="doc-icon" src="@/assets/HtmlDocIcon.svg">   
-        <h3 class="doc-title" slot="title">HTML</h3>
-        <p class="doc-text" slot="paragraph">Guías detalladas sobre el lenguaje de marcado y etiquetado de la Web.</p>        
-      </DocSection>
-
-      <DocSection>
-        <img slot="icon" class="doc-icon" src="@/assets/CssDocIcon.svg">   
-        <h3 class="doc-title" slot="title">CSS</h3>
-        <p class="doc-text" slot="paragraph">Tips y trucos de CSS para darle vida a los sitios Web Sistemas de grillas, animaciones</p>        
-      </DocSection>
-
-      
-      <DocSection>
-        <img slot="icon" class="doc-icon" src="../../../assets/JsDocIcon.svg">   
-        <h3 class="doc-title" slot="title">JavaScripit</h3>
-        <p class="doc-text" slot="paragraph">Cómo unir todo el conocimiento para hacer aplicaciones y páginas Web con la mejor experiencia de usiario.</p>        
-      </DocSection>
-      
-
-
-    </section>
   </div>
 </template>
 
@@ -87,6 +86,11 @@ export default {
 </script>
 
 <style scoped>
+.main-container{
+  width: 80vw;
+  margin: 0 auto;
+  
+}
 .section-title{
   margin-top: 32px;
   font-size: 32px;

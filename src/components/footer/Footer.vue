@@ -37,6 +37,8 @@ export default {
   padding: 16px 64px;
   display: flex;
   justify-content: center;
+  position: fixed;
+  bottom: 0;
 }
 .footer-link-container{
   margin-bottom: 32px;

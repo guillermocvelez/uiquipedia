@@ -6,7 +6,9 @@ import Videos from "@/views/videos/Index.vue";
 import Diccionario from "@/views/diccionario/Index.vue";
 import About from "@/views/about/Index.vue";
 import Guias from "@/views/guias/Index.vue";
-import Blog from "@/views/blog/Blog.vue"
+import Blog from "@/views/blog/Blog.vue";
+
+//import BasicDesign from '@/views/uiquidocs/views/BasicDesign.vue'
 
 
 Vue.use(VueRouter);
@@ -20,6 +22,14 @@ const router = new VueRouter({
       path: "/",
       name: "index",
       component: Uiquidocs,
+      children: [
+        {
+          path:'diseno',
+          name: 'diseno',
+          component:  () => import(/* webpackChunkName: "diseno" */ "@/views/uiquidocs/views/BasicDesign.vue"),
+          
+        },
+      ]      
     },
     {
       path: "/videos",

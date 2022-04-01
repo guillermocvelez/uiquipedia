@@ -29,6 +29,10 @@ export default {
   cursor: pointer;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
   color: var(--main-text);
+  transition: transform 300ms ease-in;
+}
+.section-container:hover{
+  transform: scale(1.03);
 }
 
 .doc-info-container{

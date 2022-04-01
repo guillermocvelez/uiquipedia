@@ -5,7 +5,7 @@
       <router-view></router-view>
     </main>
 
-    <Footer/>
+    <Footer class="footer"/>
 
   </div>
 </template>
@@ -48,13 +48,17 @@ export default {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  overflow: hidden;
+  /* justify-content: space-between; */
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
 .main-container{
-  width: 80%;
+  width: 100%;
+  height: 100vh;  
+  overflow: hidden;
 }
+
+
 
 </style>

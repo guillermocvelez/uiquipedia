@@ -7,7 +7,7 @@
         <div class="top-navbar">
           <ul class="top-navbar_items">                     
             <li class="top-navbar_item">
-              <router-link to="blog" class="top-navbar_item-text">Blog</router-link>
+              <router-link :to="{ name: 'blog'}" class="top-navbar_item-text">Blog</router-link>
             </li>
             <li class="top-navbar_item">
               <a class="social-link" href="https://twitter.com/guillermo_cv" target="-blank">
